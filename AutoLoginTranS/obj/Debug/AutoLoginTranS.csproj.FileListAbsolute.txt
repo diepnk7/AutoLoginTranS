@@ -1,0 +1,12 @@
+C:\Users\yoyal\source\repos\AutoLoginTranS\AutoLoginTranS\bin\Debug\AutoLoginTranS.exe.config
+C:\Users\yoyal\source\repos\AutoLoginTranS\AutoLoginTranS\bin\Debug\AutoLoginTranS.exe
+C:\Users\yoyal\source\repos\AutoLoginTranS\AutoLoginTranS\bin\Debug\AutoLoginTranS.pdb
+C:\Users\yoyal\source\repos\AutoLoginTranS\AutoLoginTranS\bin\Debug\Emgu.CV.World.dll
+C:\Users\yoyal\source\repos\AutoLoginTranS\AutoLoginTranS\obj\Debug\AutoLoginTranS.csprojAssemblyReference.cache
+C:\Users\yoyal\source\repos\AutoLoginTranS\AutoLoginTranS\obj\Debug\AutoLoginTranS.Form1.resources
+C:\Users\yoyal\source\repos\AutoLoginTranS\AutoLoginTranS\obj\Debug\AutoLoginTranS.Properties.Resources.resources
+C:\Users\yoyal\source\repos\AutoLoginTranS\AutoLoginTranS\obj\Debug\AutoLoginTranS.csproj.GenerateResource.cache
+C:\Users\yoyal\source\repos\AutoLoginTranS\AutoLoginTranS\obj\Debug\AutoLoginTranS.csproj.CoreCompileInputs.cache
+C:\Users\yoyal\source\repos\AutoLoginTranS\AutoLoginTranS\obj\Debug\AutoLoginTranS.csproj.CopyComplete
+C:\Users\yoyal\source\repos\AutoLoginTranS\AutoLoginTranS\obj\Debug\AutoLoginTranS.exe
+C:\Users\yoyal\source\repos\AutoLoginTranS\AutoLoginTranS\obj\Debug\AutoLoginTranS.pdb
