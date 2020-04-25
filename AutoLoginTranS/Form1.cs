@@ -28,7 +28,8 @@ namespace AutoLoginTranS
         public void LoginTranS()
         {
             string strCmdText;
-            strCmdText = @"/C C:\Users\yoyal\AppData\Roaming\TranS\TranS.exe";
+            string userName = Environment.UserName;
+            strCmdText = @"/C C:\Users\"+ userName +@"\AppData\Roaming\TranS\TranS.exe";
 
             Process p = new Process();
 
@@ -38,13 +39,12 @@ namespace AutoLoginTranS
             p.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
 
             p.Start();
-
-            Thread.Sleep(5000);
+            Thread.Sleep(4000);
 
             //click Student
             var screen = CaptureHelper.CaptureScreen();
             screen.Save("mainScreen.png");
-            var subBitmap = ImageScanOpenCV.GetImage("hocVien.bmp");
+            var subBitmap = ImageScanOpenCV.GetImage("btnHocVien.bmp");
             var resBitmap = ImageScanOpenCV.FindOutPoint((Bitmap)screen, subBitmap);
             if (resBitmap != null)
             {
@@ -69,7 +69,7 @@ namespace AutoLoginTranS
             //Click Join now
             var screenID = CaptureHelper.CaptureScreen();
             screenID.Save("mainScreen.png");
-            var subBitmapID = ImageScanOpenCV.GetImage("btnJoinnow.bmp");
+            var subBitmapID = ImageScanOpenCV.GetImage("btnVaoPhong.bmp");
             var resBitmapID = ImageScanOpenCV.FindOutPoint((Bitmap)screenID, subBitmapID);
             if (resBitmapID != null)
             {
@@ -101,17 +101,23 @@ namespace AutoLoginTranS
                 //Lấy Giờ Hệ Thống
 
                 string strSystemHour = DateTime.Now.ToShortTimeString();
-
-                if (strHour == strSystemHour)
+                if (strHour.Length == 4 && strSystemHour.Length == 7)
                 {
-                    timer.Stop();
-                    LoginTranS();
-                    //AutoLogin.LoginTranS(txtBoxID.Text.ToString());
+                    if (strHour == strSystemHour.Remove(4, 3))
+                    {
+                        timer.Stop();
+                        LoginTranS();
+                    }
                 }
-                //DateTime someFutureTime = new DateTime();
-                //someFutureTime = ConvertDateTime();
-                //AlarmClock clock = new AlarmClock(someFutureTime);
-                //clock.Alarm += (sender, e) => MessageBox.Show("Wake up!");
+                else
+                {
+                    if (strHour == strSystemHour)
+                    {
+                        timer.Stop();
+                        LoginTranS();
+                    }
+                }
+                
             }
         }
         #endregion //CheckTime
